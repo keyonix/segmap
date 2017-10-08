@@ -2,6 +2,8 @@
 var form = document.getElementById('file-form');
 var fileSelect = document.getElementById('file-select');
 var uploadButton = document.getElementById('upload-button');
+var imgLoaded = document.getElementsByClassName("img")[0];
+var imgPredict = document.getElementsByClassName("img predict")[0];
 
 // Create the XHR object.
 function createCORSRequest(method, url) {
@@ -36,7 +38,7 @@ form.onsubmit = function(event) {
 	console.log(file)
 	
 	// Add the file to the request.
-  	formData.append('image', file, file.name);
+  	formData.append('file', file, file.name);
 
   	// Set up the request.
 	//var xhr = new XMLHttpRequest();
@@ -46,8 +48,15 @@ form.onsubmit = function(event) {
 	// Set up a handler for when the request finishes.
 	xhr.onload = function () {
 	 	if (xhr.status === 200) {
-	    // File(s) uploaded.
-	    uploadButton.innerHTML = 'Uploaded';
+	    	// File(s) uploaded.
+	    	uploadButton.innerHTML = 'Uploaded';
+
+	    	var responsData = JSON.parse(xhr.responseText);
+	    	console.log(responsData);
+
+	    	imgLoaded.src = url+responsData.imgPath;
+	    	imgPredict.src = url+responsData.imgPredPath;
+
 	  	} else {
 	    	alert('An error occurred!');
 	  	}
