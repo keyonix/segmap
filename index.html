@@ -2,17 +2,82 @@
 <html>
 <head>
 	<title>Segmap</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Sans:300" rel="stylesheet">  <!-- To Try -->
 </head>
 <body>
-	<h1>Segmap</h1>
-	<form id="file-form" action="http://46.39.242.114:5577/" method="POST">
-		<input type="file" id="file-select" name="file" multiple/>
-		<button type="submit" id="upload-button">Upload</button>
-	</form>
-	<img class="img" src="images/img.jpg" />
-	<img class="img predict" src="images/img.jpg" />
+	<div class="container">
+		<div id="header" class="row">
+			<div class="col-lg-12">
+				<h1>Segmap - Intelligent Landscape Segmentation</h1>
+				<div class="logo-icon">
+					<h2><a href="http://keyonix.ai">K</a></h2>
+				</div>
+				<div class="logo-text">
+					<h2><a href="http://keyonix.ai">keyonix.ai</a></h2>
+				</div>	
+				<p>Segmap is a landscape image segmentation service based on
+				   Deep Convolutional Neural Networks. The project is aimed to
+				   Earth surface monitoring to address changes quickly and
+				   efficiently</p>	
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-6">
+				<p>Use the form below to upload and segment your image.
+				   A file should contain 3 channels (RGB) with a pixel
+				   value range between 0 and 255.</p>
+<!-- 				<form id="file-form" action="http://46.39.242.114:5577/" method="POST">
+					<input type="file" id="file-select" class="button" name="file" multiple/>
+					<button type="submit" id="upload-button" class="button">Upload</button>
+				</form> -->
+
+				<form id="file-form" action="http://46.39.242.114:5577/" method="POST">
+					<input type="file" id="file-select" class="button" name="file" multiple/>
+					<label tabindex="0" for="file-select" id="file-label">Select a file...</label>
+					<button type="submit" id="upload-button" class="button">Upload</button>
+				</form>
+
+
+			</div>
+			
+			<div class="col-sm-6">
+				<div class='legend'>
+					<div class='legend-scale'>
+						<ul class='legend-labels'>
+							<li><span style='background:rgb(34, 139, 34);'></span>1 - Rain Forest</li>
+							<li><span style='background:rgb(152, 251, 152);'></span>2 - Agriculture</li>
+							<li><span style='background:rgb(192, 192, 192);'></span>3 - Habitation</li>
+							<li><span style='background:rgb(255, 255, 255);'></span>4 - Road</li>
+							<li><span style='background:rgb(135, 206, 250);'></span>5 - Water</li>
+							<li><span style='background:rgb(160, 82, 45);'></span>6 - Bare Ground</li>
+							<li><span style='background:rgb(165, 42, 42);'></span>7 - Mining</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="img-row row"> 
+			<div class="col-sm-6">
+				<div class="img-wrap">
+					<img class="img" src="images/img.jpg" />
+				</div>		
+			</div>
+			<div class="col-sm-6">
+				<div class="img-wrap">
+					<img class="img predict" src="images/img.jpg" />
+				</div>
+			</div>
+		</div>
+
+	</div>
 
 	<script src="assets/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/main.js"></script>
 </body>
 </html>

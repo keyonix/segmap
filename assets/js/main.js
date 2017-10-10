@@ -1,9 +1,13 @@
 
+// Ajax
 var form = document.getElementById('file-form');
 var fileSelect = document.getElementById('file-select');
 var uploadButton = document.getElementById('upload-button');
 var imgLoaded = document.getElementsByClassName("img")[0];
 var imgPredict = document.getElementsByClassName("img predict")[0];
+
+var fileSelect = document.querySelector("#file-select");
+var browseButton = document.querySelector("#file-label");
 
 // Create the XHR object.
 function createCORSRequest(method, url) {
@@ -65,3 +69,7 @@ form.onsubmit = function(event) {
 	// Send the Data.
 	xhr.send(formData);
 }
+
+fileSelect.addEventListener( "change", function( event ) {  
+    browseButton.innerHTML = this.value;
+});  
