@@ -54,6 +54,7 @@ form.onsubmit = function(event) {
 	 	if (xhr.status === 200) {
 	    	// File(s) uploaded.
 	    	uploadButton.innerHTML = 'Uploaded';
+	    	browseButton.innerHTML = 'Select a file...';
 
 	    	var responsData = JSON.parse(xhr.responseText);
 	    	console.log(responsData);
@@ -70,6 +71,7 @@ form.onsubmit = function(event) {
 	xhr.send(formData);
 }
 
-fileSelect.addEventListener( "change", function( event ) {  
-    browseButton.innerHTML = this.value;
+fileSelect.addEventListener( "change", function( event ) { 
+	uploadButton.innerHTML = 'Upload';
+    browseButton.innerHTML = this.value.replace(/^.*\\/, "");
 });  

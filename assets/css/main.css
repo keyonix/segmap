@@ -89,7 +89,6 @@ color: #777;
   width: 30%;
   text-transform: uppercase;
   transition: all 0.25s ease 0s;
-  
 }
 .button:hover, .button:active, .button:focus, #file-label:hover {
   border-color: #222c3d;
@@ -128,3 +127,34 @@ img {
     max-width: 100%;
     max-height: 100%;
 }
+
+#description {
+	text-align: center;
+	color: #222c3d;
+}
+
+#suggestion-welcome {
+	margin-top: 30px;
+	font-size: 16px;
+}
+
+#contacts {
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+/*Footer*/
+.footer {
+  margin-top: 20px;
+  height: 70px;
+  background-color: #fff;
+  border-top: 0.5px solid #222c3d;
+  color: #888;
+  text-align: center;
+}
+
+.footer p {
+  padding-top: 25px;
+  margin: 0;
+}
+/**/
