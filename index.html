@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Segmap</title>
+	<meta name="keywords" content="Искусственный интеллект, Машинное обучение, Нейронные сети, Компьютерное зрение, Анализ данных, Геоинформационные системы, Мониторинг, Природопользование, Machine Learning, Deep Learning, Computer Vision, Artificial Intelligence, AI, Neural Networks, Data Science, GIS, Geoinformation Systems, Segmentation, Landscape, Surface, Research">
+	<meta name="description" content="Image segmentation service for landscape monitoring based on Artificial Intelligence technologies">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -19,16 +21,16 @@
 					<h2><a href="http://keyonix.ai">keyonix.ai</a></h2>
 				</div>	
 				<p>Segmap is a landscape image segmentation service based on
-				   Deep Convolutional Neural Networks. The project is aimed to
-				   Earth surface monitoring to address changes quickly and
-				   efficiently</p>	
+				   Deep Convolutional Neural Networks. The aim of the project is 
+				   Earth surface monitoring for detecting and addressing 
+				   changes quickly and efficiently.</p>	
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-sm-6">
 				<p>Use the form below to upload and segment your image.
-				   A file should contain 3 channels (RGB) with a pixel
+				   Your file should contain 3 channels (RGB) with pixel
 				   value range between 0 and 255.</p>
 
 				<form id="file-form" action="http://46.39.242.114:5577/" method="POST">
@@ -88,5 +90,33 @@
 	<script src="assets/js/jquery-3.2.1.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+	    (function (d, w, c) {
+	        (w[c] = w[c] || []).push(function() {
+	            try {
+	                w.yaCounter46128579 = new Ya.Metrika({
+	                    id:46128579,
+	                    clickmap:true,
+	                    trackLinks:true,
+	                    accurateTrackBounce:true
+	                });
+	            } catch(e) { }
+	        });
+
+	        var n = d.getElementsByTagName("script")[0],
+	            s = d.createElement("script"),
+	            f = function () { n.parentNode.insertBefore(s, n); };
+	        s.type = "text/javascript";
+	        s.async = true;
+	        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+	        if (w.opera == "[object Opera]") {
+	            d.addEventListener("DOMContentLoaded", f, false);
+	        } else { f(); }
+	    })(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/46128579" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
 </body>
 </html>
